@@ -50,7 +50,7 @@ public:
 
         char        routers[4096];          ///< List of connected routers hash ID's delimited by PIPE
         uint32_t    router_count;           ///< Count of active/connected routers
-        uint32_t    timestamp_secs;         ///< Timestamp in seconds since EPOC
+        uint64_t    timestamp_secs;         ///< Timestamp in seconds since EPOC (64-bit for Y2038 safety)
         uint32_t    timestamp_us;           ///< Timestamp microseconds
     };
 
@@ -80,7 +80,7 @@ public:
 
         char        term_data[4096];        ///< Type=0 String termination info data
         char        initiate_data[4096];    ///< Type=0 String initiation info data
-        uint32_t    timestamp_secs;         ///< Timestamp in seconds since EPOC
+        uint64_t    timestamp_secs;         ///< Timestamp in seconds since EPOC (64-bit for Y2038 safety)
         uint32_t    timestamp_us;           ///< Timestamp microseconds
     };
 
@@ -113,7 +113,7 @@ public:
         bool        isLocRibFiltered;       ///< True if the local rib is filtered
         bool        isIPv4;                 ///< true if peer is IPv4 or false if IPv6
         bool        isTwoOctet;             ///< Indicates if peer is using 2 octet encoding
-        uint32_t    timestamp_secs;         ///< Timestamp in seconds since EPOC
+        uint64_t    timestamp_secs;         ///< Timestamp in seconds since EPOC (64-bit for Y2038 safety)
         uint32_t    timestamp_us;           ///< Timestamp microseconds
     };
 
